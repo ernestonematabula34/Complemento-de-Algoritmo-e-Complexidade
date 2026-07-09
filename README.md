@@ -110,8 +110,8 @@ Para garantir uma comparação justa entre os quatro algoritmos:
 
 | Pessoa | Responsabilidade |
 |---|---|
-| Bruna Panzo 1 | Bubble Sort e Selection Sort, com respetiva análise de complexidade | 
-| Ernesto Nematabula 2 | Estrutura do programa, menu, entradas/saídas, cronómetro, contador de comparações e integração final  |
-| Raul Rana 3 | Insertion Sort e Merge Sort, com respetiva análise de complexidade |
+| Bruna Panzo | Bubble Sort e Selection Sort, com respetiva análise de complexidade | 
+| Ernesto Nematabula | Estrutura do programa, menu, entradas/saídas, cronómetro, contador de comparações e integração final  |
+| Raul Rana | Insertion Sort e Merge Sort, com respetiva análise de complexidade |
 
 Introdução, conclusão, testes de integração e apresentação foram preparados em conjunto pelo grupo.
