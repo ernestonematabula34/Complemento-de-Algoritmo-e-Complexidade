@@ -5,10 +5,6 @@
 #include "estatisticas.h"
 #include "ordenacao.h"
 
-/* Pessoa 1 usa-a para chamar, de forma genérica, qualquer um dos 4 algoritmos que
- * a Pessoa 2 e a Pessoa 3 implementarem — desde que respeitem a
- * assinatura definida em ordenacao.h. 
- */
 static void executarOrdenacao(const char *nome, FuncaoOrdenacao algoritmo,
                                const int original[], int tamanho) {
     int copia[TAMANHO_MAXIMO];
