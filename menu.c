@@ -59,12 +59,12 @@ void menuPrincipal() {
                 }
                 break;
             case 4:
-                //if (tamanho > 0) executarOrdenacao("Bubble Sort", bubbleSort, vetor, tamanho);
-                //else printf("Vetor vazio.\n");
+                if (tamanho > 0) executarOrdenacao("Bubble Sort", bubbleSort, vetor, tamanho);
+                else printf("Vetor vazio.\n");
                 break;
             case 5:
-                //if (tamanho > 0) executarOrdenacao("Selection Sort", selectionSort, vetor, tamanho);
-                //else printf("Vetor vazio.\n");
+                if (tamanho > 0) executarOrdenacao("Selection Sort", selectionSort, vetor, tamanho);
+                else printf("Vetor vazio.\n");
                 break;
             case 6:
                 //if (tamanho > 0) executarOrdenacao("Insertion Sort", insertionSort, vetor, tamanho);
@@ -75,14 +75,14 @@ void menuPrincipal() {
                 //else printf("Vetor vazio.\n");
                 break;
             case 8:
-                 /*if (tamanho > 0) {
+                 if (tamanho > 0) {
                     executarOrdenacao("Bubble Sort", bubbleSort, vetor, tamanho);
                     executarOrdenacao("Selection Sort", selectionSort, vetor, tamanho);
-                    executarOrdenacao("Insertion Sort", insertionSort, vetor, tamanho);
-                    executarOrdenacao("Merge Sort", mergeSort, vetor, tamanho);
+                   // executarOrdenacao("Insertion Sort", insertionSort, vetor, tamanho);
+                   // executarOrdenacao("Merge Sort", mergeSort, vetor, tamanho);
                 } else {
                     printf("Vetor vazio.\n");
-                }*/
+                }
                 break;
             case 0:
                 printf("A sair...\n");
