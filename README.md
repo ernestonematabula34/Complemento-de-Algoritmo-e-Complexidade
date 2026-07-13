@@ -34,10 +34,7 @@ Aplicação em linguagem C que permite inserir ou gerar vetores de inteiros e or
 ├── operandovetores.h / operandovetores.c        # Entrada/saída de dados do vetor
 ├── estatisticas.h / estatisticas.c # Cronómetro e contador de comparações
 ├── ordenacao.h          # Interface comum aos 4 algoritmos de ordenação
-├── bubble_sort.c        # Implementação do Bubble Sort
-├── selection_sort.c     # Implementação do Selection Sort
-├── insertion_sort.c     # Implementação do Insertion Sort
-├── merge_sort.c         # Implementação do Merge Sort
+├── ordenacao.c        # Implementação do Bubble Sort, Insertion Sort, Selection Sort e MergeSort
 ├── Makefile
 └── README.md
 ```

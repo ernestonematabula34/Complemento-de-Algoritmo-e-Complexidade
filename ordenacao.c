@@ -22,6 +22,7 @@ void bubbleSort(int vetor[], int tamanho)
         }
     }
 }
+
 void selectionSort(int vetor[], int tamanho)
 {
     int i, j;
