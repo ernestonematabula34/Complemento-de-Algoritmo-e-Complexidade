@@ -16,7 +16,7 @@ void iniciarCronometro() {
 //CLOCKS_PER_SEC e uma funcao de time.h
 double pararCronometro() {
     fim = clock();
-    return (double)(fim - inicio) / CLOCKS_PER_SEC;
+    return ((double)(fim - inicio) / CLOCKS_PER_SEC);
 }
 
 void resetContador() {
@@ -36,6 +36,6 @@ long obterComparacoes(void) {
 
 void mostrarResultados(const char *nomeAlgoritmo, double tempo, long comparacoes) {
     printf("\n--- Resultados: %s ---\n", nomeAlgoritmo);
-    printf("Tempo de execução : %.6f segundos\n", tempo);
+    printf("Tempo de execução : %.20f ms\n", tempo);
     printf("Numero de comparações: %ld\n", comparacoes);
 }
