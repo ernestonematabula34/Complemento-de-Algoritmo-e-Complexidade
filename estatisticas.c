@@ -4,19 +4,20 @@
 
 /* Variáveis estáticas: só visíveis dentro deste ficheiro.
  * Isto evita que outros módulos mexam diretamente nelas — só podem
- * usar as funções abaixo (encapsulamento, mesmo em C). */
-static clock_t inicio;
-static clock_t fim;
+ * usar as funções abaixo (encapsulamento, mesmo em C). */ 
 static long contadorComparacoes = 0;
+static struct timespec inicio, fim;
 
 void iniciarCronometro() {
-    inicio = clock();
+    clock_gettime(CLOCK_MONOTONIC, &inicio);
 }
 
 //CLOCKS_PER_SEC e uma funcao de time.h
 double pararCronometro() {
-    fim = clock();
-    return ((double)(fim - inicio) / CLOCKS_PER_SEC);
+    clock_gettime(CLOCK_MONOTONIC, &fim);
+    double segundos = (fim.tv_sec - inicio.tv_sec)
+                     + (fim.tv_nsec - inicio.tv_nsec) / 1e9;
+    return segundos;
 }
 
 void resetContador() {
@@ -36,6 +37,6 @@ long obterComparacoes(void) {
 
 void mostrarResultados(const char *nomeAlgoritmo, double tempo, long comparacoes) {
     printf("\n--- Resultados: %s ---\n", nomeAlgoritmo);
-    printf("Tempo de execução : %.20f ms\n", tempo);
+    printf("Tempo de execução : %.8f segundos\n", tempo);
     printf("Numero de comparações: %ld\n", comparacoes);
 }
