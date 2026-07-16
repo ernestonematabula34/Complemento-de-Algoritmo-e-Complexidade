@@ -4,30 +4,25 @@
 
 /* Variáveis estáticas: só visíveis dentro deste ficheiro.
  * Isto evita que outros módulos mexam diretamente nelas — só podem
- * usar as funções abaixo (encapsulamento, mesmo em C). */ 
+ * usar as funções abaixo (encapsulamento, mesmo em C). */
+static clock_t inicioClock;
+static clock_t fimClock;
 static long contadorComparacoes = 0;
-static struct timespec inicio, fim;
 
-void iniciarCronometro() {
-    clock_gettime(CLOCK_MONOTONIC, &inicio);
+void iniciarCronometro(void) {
+    inicioClock = clock();
 }
 
-//CLOCKS_PER_SEC e uma funcao de time.h
-double pararCronometro() {
-    clock_gettime(CLOCK_MONOTONIC, &fim);
-    double segundos = (fim.tv_sec - inicio.tv_sec)
-                     + (fim.tv_nsec - inicio.tv_nsec) / 1e9;
-    return segundos;
+double pararCronometro(void) {
+    fimClock = clock();
+    return (double)(fimClock - inicioClock) / CLOCKS_PER_SEC;
 }
 
-void resetContador() {
+void resetContador(void) {
     contadorComparacoes = 0;
 }
 
-/* invoquem esta funcao nos vossos algoritmos para contar o
- * numero de ordenacoes feitos com cada algoritmo de ordenacao
- */
-void registrarComparacao() {
+void registrarComparacao(void) {
     contadorComparacoes++;
 }
 
@@ -37,6 +32,7 @@ long obterComparacoes(void) {
 
 void mostrarResultados(const char *nomeAlgoritmo, double tempo, long comparacoes) {
     printf("\n--- Resultados: %s ---\n", nomeAlgoritmo);
-    printf("Tempo de execução : %.8f segundos\n", tempo);
-    printf("Numero de comparações: %ld\n", comparacoes);
+    printf("Tempo de execucao : %.6f segundos\n", tempo);
+    printf("Numero de comparacoes: %ld\n", comparacoes);
 }
+
