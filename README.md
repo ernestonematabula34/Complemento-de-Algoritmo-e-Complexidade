@@ -54,7 +54,7 @@ Requisitos: `gcc` e `make`.
 
 ```bash
 git clone <url-do-repositorio>
-cd <pasta-do-projeto>
+cd Programa
 make
 ./ordenacao
 ```
